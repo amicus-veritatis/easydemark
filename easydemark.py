@@ -1,9 +1,9 @@
-# Robyn Speer. (2019). ftfy (Version 5.5). Zenodo.
-# http://doi.org/10.5281/zenodo.2591652
-# (Distributed under MIT License)
 # In order to reduce dependency, copy and paste from the source
 # with slight modification.
 # See:
+#   Robyn Speer. (2019). ftfy (Version 5.5). Zenodo.
+#   http://doi.org/10.5281/zenodo.2591652
+#   (Distributed under MIT License)
 #   https://github.com/rspeer/python-ftfy/blob/main/ftfy/chardata.py
 import itertools
 import unicodedata
