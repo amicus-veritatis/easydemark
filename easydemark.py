@@ -84,17 +84,25 @@ def _build_width_map():
 
 FULL_WIDTH_CHARACTER = _build_width_map()
 
-LATIN_EASYMARK_DECODE_MAP = {
+# U+E0100..U+E01EF VARIATION SELECTORS SUPPLEMENT
+VARIATION_SELECTORS_SUPPLEMENT = {
+    k: None for k in range(0xE0100, 0xE01F0)
+}
+
+EASYMARK_DECODE_MAP = {
+    # latin characters
     **LIGATURES,
     **CONTROL_CHARS,
     **FULL_WIDTH_CHARACTER,
     **ZERO_WIDTH_SPACE,
     **HALF_WIDTH_SPACE,
     **FULL_WIDTH_SPACE,
+    # CJK Characters
+    **VARIATION_SELECTORS_SUPPLEMENT
 }
 
 
-def decode_latin_easymark(text):
+def decode_easymark(text):
     """
     Decode text watermark methods suggested in "Embarrassingly Simple Text Watermarks"
     in a embarrasingly simple way.
@@ -104,4 +112,4 @@ def decode_latin_easymark(text):
       “Embarrassingly Simple Text Watermarks.” arXiv, October 13, 2023.
       http://arxiv.org/abs/2310.08920.
     """
-    return text.translate(LATIN_EASYMARK_DECODE_MAP)
+    return text.translate(EASYMARK_DECODE_MAP)
