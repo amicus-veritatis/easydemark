@@ -104,8 +104,8 @@ EASYMARK_DECODE_MAP = {
 
 def decode_easymark(text):
     """
-    Decode text watermark methods suggested in "Embarrassingly Simple Text Watermarks"
-    in a embarrasingly simple way.
+    Decode the text watermark methods suggested in "Embarrassingly Simple Text Watermarks"
+    in an embarrasingly simple way.
 
     See:
       Sato, Ryoma, Yuki Takezawa, Han Bao, Kenta Niwa, and Makoto Yamada.
