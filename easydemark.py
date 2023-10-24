@@ -95,7 +95,6 @@ def decode_latin_easymark(text):
     """
     Decode text watermark methods suggested in "Embarrassingly Simple Text Watermarks"
     in a embarrasingly simple way.
-    Can be replaced by ftfy.fix_text without any modification.
 
     See:
       Sato, Ryoma, Yuki Takezawa, Han Bao, Kenta Niwa, and Makoto Yamada.
